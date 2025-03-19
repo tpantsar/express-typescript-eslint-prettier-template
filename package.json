@@ -1,0 +1,61 @@
+{
+  "name": "express-typescript-eslint-prettier-template",
+  "version": "1.0.0",
+  "description": "An Express.js template with TypeScript, ESLint and Prettier",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --check"
+    ]
+  },
+  "imports": {
+    "#*": "./src/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.12.1",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@vitest/coverage-v8": "^3.0.9",
+    "@vitest/eslint-plugin": "^1.1.38",
+    "eslint": "^9.22.0",
+    "eslint-plugin-perfectionist": "^4.10.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.9"
+  }
+}
