@@ -1,1 +1,7 @@
+node_modules
+public
+build
 dist
+.vscode
+*.log
+*.yml
